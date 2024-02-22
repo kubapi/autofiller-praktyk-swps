@@ -37,7 +37,7 @@ def submit_internship_entry(applicationId, Date__c, Start_Time__c, End_Time__c, 
     
     data = {
         "message": json.dumps(message_payload),
-        "aura.context": '{"mode":"PROD","fwuid":"YWYyQV90T3g3VDhySzNWUm1kcF9WUVY4bi1LdGdMbklVbHlMdER1eVVlUGcyNDYuMTUuNS0zLjAuNA","app":"siteforce:communityApp","loaded":{"APPLICATION@markup://siteforce:communityApp":"xUUH_isHmNQqCOJ9yNTV7A","COMPONENT@markup://instrumentation:o11ySecondaryLoader":"iVoI_RYCX4m4O5loBTnQfA"},"dn":[],"globals":{},"uad":false}',
+        "aura.context": '{"mode":"PROD","fwuid":"MFZGMnNxcWxxQVZkaERsVUY3RzNmZzBXM295ZTJ1MzlOT0pndTRaeTZnNEEyNDguMTAuMi01LjAuOA","app":"siteforce:communityApp","loaded":{"APPLICATION@markup://siteforce:communityApp":"xUUH_isHmNQqCOJ9yNTV7A","COMPONENT@markup://instrumentation:o11ySecondaryLoader":"iVoI_RYCX4m4O5loBTnQfA"},"dn":[],"globals":{},"uad":false}',
         "aura.token": "",
     }
 
@@ -46,7 +46,7 @@ def submit_internship_entry(applicationId, Date__c, Start_Time__c, End_Time__c, 
         headers=headers,
         data=data,
     )
-    
+    print(response.text)
     text_response = json.loads(response.text)
     
  

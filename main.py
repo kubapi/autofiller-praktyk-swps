@@ -15,9 +15,8 @@ def submit_entries_from_file(file_path):
             Description__c = row['Description']
             result = submit_internship_entry(applicationId, Date__c, Start_Time__c, End_Time__c, Description__c)
             print(applicationId, Date__c, Start_Time__c, End_Time__c, Description__c, ' - ', result)
-            time.sleep(2)
-
+            time.sleep(10)
     return results
 
-file_path = 'data.csv'  
+file_path = 'data2.csv'  
 results = submit_entries_from_file(file_path)
